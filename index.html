@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleTablet.css">
+    <link rel="stylesheet" href="css/styleMovil.css">
     <script src="js/main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
     <title>Peliculas</title>
 </head>
 <body>
+    <h1 id="titulo">
+        Pelipolis
+    </h1>
     <div id="input-container">
-        <label for="ip">Ingresa el nombre de una pelicula</label>
+        <label for="ip" id="lb-peli">Ingresa el nombre de una pelicula</label>
         <input
             name="ip"
             id="inp-peli"
-            placeholder="Ingresa una pelicula"
         />
         <button id="btn-buscar">Buscar</button>
     </div>

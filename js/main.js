@@ -2,10 +2,10 @@ window.onload = (e) => {
     console.log('JS is in tha house!');
 
     const btnBuscar = document.querySelector('#btn-buscar');
-    btnBuscar.addEventListener('click', event =>{
-        
-        const inpIP = document.querySelector('#inp-peli');
-        const peli = inpIP.value.trim();
+    const inpPeli = document.querySelector('#inp-peli');
+    
+    function buscarPeli(){
+        const peli = inpPeli.value.trim();
         if (peli === "") {
             alert("Ingresa una película");
             return;
@@ -38,16 +38,25 @@ window.onload = (e) => {
                 console.error('Hubo un error');
                 let divRespuesta = document.querySelector('#respuesta');
                 divRespuesta.innerHTML = "";
-                divRespuesta.innerHTML += "<p>Ocurrio un error al buscar la pelicula/p>";
+                divRespuesta.innerHTML += "<p>Ocurrio un error al buscar la pelicula</p>";
                 })
-    }}) 
+    }}
     function mostrarPeli(peli){
         const mostrar = document.getElementById('respuesta');
         mostrar.innerHTML = " "
         const posterUrl = `https://image.tmdb.org/t/p/w500${peli.poster_path}`
-        mostrar.innerHTML += `<img src=${posterUrl} alt=${peli.original_title}>`
-        mostrar.innerHTML += `<p>Titulo: ${peli.original_title}</p>`
+        mostrar.innerHTML += `<img class="poster" src=${posterUrl} alt=${peli.original_title}>`
+        mostrar.innerHTML += `<p id="p-titulo">${peli.original_title}</p>`
         mostrar.innerHTML += `<p>Sinopsis: ${peli.overview}</p>`
         mostrar.innerHTML += `<p>Fecha de lanzamiento: ${peli.release_date}</p>`
-    }   
+        mostrar.innerHTML += `<p>Popularidad: ${peli.popularity}</p>`
+        mostrar.innerHTML += `<p>Calificación: ${peli.vote_average}</p>`
+    }
+    btnBuscar.addEventListener('click', buscarPeli);
+    inpPeli.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            buscarPeli();
+        }
+    }); 
 }

@@ -1,0 +1,21 @@
+@media (max-width: 480px){
+    #titulo{
+    font-size: 20vw;
+    }
+    #btn-buscar{
+        font-size: 3vw;
+        font-weight: bold;
+        width: 15vw;
+    }
+    #p-titulo{
+        color: #03045e;
+        font-size: 7vw;
+    }
+    p{
+        font-weight: normal;
+    }
+    .poster{
+        box-shadow: 3px 4px 10px rgba(0, 0, 0, 80);
+        width: 70vw;
+    }
+}

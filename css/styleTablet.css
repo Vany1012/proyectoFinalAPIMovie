@@ -1,0 +1,37 @@
+@media (max-width: 768px){
+    #titulo{
+    font-size: 20vw;
+    }
+    #input-container{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5vh;
+        text-align: center;
+    }
+    #lb-peli{
+        font-size: 3vw;
+        margin-bottom: 2vw;
+    }
+    #inp-peli{
+        border-radius: 10px;
+        margin-bottom: 3vw;
+        width: 40vw;
+    }
+
+    #btn-buscar{
+        width: 15vw;
+    }
+    #respuesta{
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    p{
+        font-family: system-ui;
+        font-weight: bold;
+    }
+    .poster{
+        box-shadow: 3px 4px 10px rgba(0, 0, 0, 100);
+        width: 70vw;
+    }
+}
